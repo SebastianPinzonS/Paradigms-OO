@@ -219,7 +219,7 @@ define
          {Loop {Arity Second} First}  
    end
 
-   % Task 6: Dispatch
+   
    % Task 6: Se modifica Dispatch añadiéndole el índice
    proc {Dispatch Object Selector Argument Index}
       local Methods in
