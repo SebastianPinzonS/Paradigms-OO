@@ -1,6 +1,8 @@
 % Proyecto OOP
-% David Octavio Ibarra
-% Sebastian Rojas
+% David Octavio Ibarra - 202014446
+% Juan Sebastián Pinzon Sampedro - 202013144
+
+
 functor
 import
    Browser(browse:Browse)
@@ -173,13 +175,13 @@ define
    end
 
 
-   %Task 5: select the first implementation and pass it one argument.
-   proc {Dispatch Object Selector Argument}
-      case Object.Selector
-      of Method|_ then
-         {Method Argument}
-      end
-   end
+   %% Task 5: select the first implementation and pass it one argument.
+   %proc {Dispatch Object Selector Argument}
+   %   case Object.Selector
+   %   of Method|_ then
+   %      {Method Argument}
+   %   end
+   %end
 
    %Helper for poly composition: retain methods as ordered lists.
    fun {AddMethods Features Obj Acc}
@@ -231,4 +233,9 @@ define
          end
       end
    end
+
+   proc {NextFunction Object Selector Argument Index}
+   {Dispatch Object Selector Argument Index+1}
+   end
+   
 end
